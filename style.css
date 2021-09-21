@@ -1,0 +1,231 @@
+body {
+    background: linear-gradient(-45deg, #cfd7f0, #d4eeed, #c9f0cb) right top no-repeat fixed;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2{
+    margin: 0;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+.wrapper {
+    background-color:#fefefe57;
+    width: 300px;
+    height: 550px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px -10px #80808099;
+    margin: 20px;
+}
+.tabsContent-1 .profileTop{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tabsContent-1 .profileTop img{
+    height: 120px;
+    width: 120px;
+    border-radius: 100em;
+    margin: 10px;
+    padding: 3px;
+    box-shadow: 0 5px 20px 0 #27ffaf, 0px 0 0 5px #27ffaf50;
+}
+.tabsContent-1 .topName {
+    margin: 10px;
+    text-align: center;
+}
+.tabsContent-2 .profileTop, .tabsContent-3 .profileTop {
+    display:flex;
+    align-items: center;
+}
+.tabsContent-2 .profileTop img, .tabsContent-3 .profileTop img{
+    height: 80px;
+    width: 80px;
+    border-radius: 100em;
+    margin: 10px;
+    padding: 3px;
+    box-shadow: 0 5px 20px 0 #27ffaf, 0px 0 0 5px #27ffaf50;
+    flex-shrink: 0;
+}
+.tabsContent-2 .topName, .tabsContent-3 .topName {
+    flex: 1;
+    text-align: center;
+}
+.topName h3{
+    margin: 0;
+}
+.topName span{
+    opacity: .7;
+    font-size: 90%;
+}
+.timeline {
+    position: relative;
+}
+.timeline:after {
+    background: linear-gradient(to top,#50ffba00 0%,#50ffba 100%);
+    content: "";
+    left: 45px;
+    width: 2px;
+    top: 4px;
+    height: 100%;
+    position: absolute;
+}
+.item {
+    position: relative;
+    padding-left: 60px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    z-index: 1;
+}
+.item:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 3px;
+    left: 40px;
+    width: 8px;
+    height: 8px;
+    line-height: 0.6;
+    border: 2px solid #e1eff4;
+    font-size: 12px;
+    text-indent: -42px;
+    border-radius: 50%;
+    color: rgb(133 133 133 / 70%);
+    background: linear-gradient(to bottom,#50ffbe 0%,#b1fee1 100%);
+}
+.contact i {
+    color: #5a5a5a;
+    text-align: center;
+    min-width: 30px;
+}
+.linkContact ul {
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+    padding-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.linkContact li a{
+    font-size: 20px;
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+}
+.linkContact li a:hover{
+    opacity: .7;
+    transition: all .3s;
+    transform: scale(1.1);
+}
+.linkContact li:nth-child(1) a{
+    background: linear-gradient(10deg,#2b5adf ,#45aaff);
+    box-shadow: 0 4px 20px #235dd3b3;
+}
+.linkContact li:nth-child(1) a:hover {
+    box-shadow: 0 4px 20px #235dd3b3;
+}
+.linkContact li:nth-child(2) a{
+    background: linear-gradient(20deg,#ffc050,#ff593f,#cf3a97 ,#7841ca);
+    box-shadow: 0 4px 20px #d34323b3;
+}
+.linkContact li:nth-child(2) a:hover {
+    box-shadow: 0 4px 20px #d34323b3;
+}
+.linkContact li:nth-child(3) a{
+    background: #ebad20;
+    box-shadow: 0 4px 20px #d3a523b3;
+}
+.linkContact li:nth-child(3) a:hover {
+    box-shadow: 0 4px 20px #d3a523b3;
+}
+.linkContact li:nth-child(4) a{
+    background: #000;
+    box-shadow: 0 4px 20px #1c1c1cb3;
+}
+.linkContact li:nth-child(4) a:hover {
+    box-shadow: 0 4px 20px #1c1c1cb3;
+}
+.profileTabs {
+    height: calc(100% - 30px);
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.tabsHead{
+    display:flex; 
+    font-size:13px;
+    line-height:1.7em
+} 
+.tabsHead > *:not(:last-child){
+    margin-right: 8px;
+} 
+.tabsHead > *{
+    width: 33.33333%;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 6px 12px; 
+    position:relative;
+    text-align: center;
+} 
+.tabsHead > *:before{
+    content:attr(data-text)
+} 
+.tabsHead > *:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg,#80e5e11f,#71e4771f);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+}  
+.tabsContent{
+    position:relative
+} 
+.tabsContent > *{
+    display:none;
+    width:100%
+} 
+.tabsContent > * p:first-child{
+    margin-top:0
+} 
+input[id*="1"]:checked ~ .profileTabs label[for*="1"]:after, 
+input[id*="2"]:checked ~ .profileTabs label[for*="2"]:after, 
+input[id*="3"]:checked ~ .profileTabs label[for*="3"]:after{
+    visibility:visible;
+    opacity:1
+} 
+input[id*="1"]:checked ~ .profileTabs .tabsContent div[class*="Content-1"], 
+input[id*="2"]:checked ~ .profileTabs .tabsContent div[class*="Content-2"], 
+input[id*="3"]:checked ~ .profileTabs .tabsContent div[class*="Content-3"]{
+    display:block
+}
+.postNav{
+    font-size:13px;
+    margin:50px 0; 
+    justify-content:center
+} 
+.postNav > *{
+    padding:8px 15px;
+    border-radius:2px;
+    margin-bottom:8px
+} 
+.postNav > *:not(:last-child){
+    margin-right:8px
+}
+.allTabs{
+    display: none;
+}
